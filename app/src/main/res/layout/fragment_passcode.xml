@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PasscodeFragment"
+    android:background="@color/darkerWhite">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/br_red"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/br_yellow"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="440dp"
+        android:background="@drawable/br_green"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvSecurityScreen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/security_screen"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvEnterPasscode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:text="@string/enter_your_passcode"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvSecurityScreen" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivPasscodeOne"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="93dp"
+        android:layout_marginTop="26dp"
+        android:src="@drawable/ic_transparent_ellipse"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvEnterPasscode" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivPasscodeTwo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="55dp"
+        android:layout_marginTop="26dp"
+        android:src="@drawable/ic_transparent_ellipse"
+        app:layout_constraintStart_toEndOf="@+id/ivPasscodeOne"
+        app:layout_constraintTop_toBottomOf="@+id/tvEnterPasscode" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivPasscodeThree"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="55dp"
+        android:layout_marginTop="26dp"
+        android:src="@drawable/ic_transparent_ellipse"
+        app:layout_constraintStart_toEndOf="@+id/ivPasscodeTwo"
+        app:layout_constraintTop_toBottomOf="@+id/tvEnterPasscode" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivPasscodeFour"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="55dp"
+        android:layout_marginTop="26dp"
+        android:layout_marginEnd="93dp"
+        android:src="@drawable/ic_transparent_ellipse"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/ivPasscodeThree"
+        app:layout_constraintTop_toBottomOf="@+id/tvEnterPasscode" />
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/btnOne"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="102dp"
+        android:background="@drawable/ic_white_ellipse"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvEnterPasscode" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/_1"
+        android:textSize="32sp"
+        app:layout_constraintBottom_toBottomOf="@+id/btnOne"
+        app:layout_constraintEnd_toEndOf="@+id/btnOne"
+        app:layout_constraintStart_toStartOf="@+id/btnOne"
+        app:layout_constraintTop_toTopOf="@+id/btnOne" />
+
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/btnTwo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="102dp"
+        android:background="@drawable/ic_white_ellipse"
+        app:layout_constraintStart_toEndOf="@+id/btnOne"
+        app:layout_constraintTop_toBottomOf="@+id/tvEnterPasscode" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/_2"
+        android:textSize="32sp"
+        app:layout_constraintBottom_toBottomOf="@+id/btnTwo"
+        app:layout_constraintEnd_toEndOf="@+id/btnTwo"
+        app:layout_constraintStart_toStartOf="@+id/btnTwo"
+        app:layout_constraintTop_toTopOf="@+id/btnTwo" />
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/btnThree"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="102dp"
+        android:layout_marginEnd="40dp"
+        android:background="@drawable/ic_white_ellipse"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnTwo"
+        app:layout_constraintTop_toBottomOf="@+id/tvEnterPasscode" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/_3"
+        android:textSize="32sp"
+        app:layout_constraintBottom_toBottomOf="@+id/btnThree"
+        app:layout_constraintEnd_toEndOf="@+id/btnThree"
+        app:layout_constraintStart_toStartOf="@+id/btnThree"
+        app:layout_constraintTop_toTopOf="@+id/btnThree" />
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/btnFour"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/ic_white_ellipse"
+        app:layout_constraintStart_toStartOf="@+id/btnOne"
+        app:layout_constraintTop_toBottomOf="@+id/btnOne" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/_4"
+        android:textSize="32sp"
+        app:layout_constraintBottom_toBottomOf="@+id/btnFour"
+        app:layout_constraintEnd_toEndOf="@+id/btnFour"
+        app:layout_constraintStart_toStartOf="@+id/btnFour"
+        app:layout_constraintTop_toTopOf="@+id/btnFour" />
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/btnFive"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/ic_white_ellipse"
+        app:layout_constraintStart_toEndOf="@+id/btnFour"
+        app:layout_constraintTop_toBottomOf="@+id/btnTwo" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/_5"
+        android:textSize="32sp"
+        app:layout_constraintBottom_toBottomOf="@+id/btnFive"
+        app:layout_constraintEnd_toEndOf="@+id/btnFive"
+        app:layout_constraintStart_toStartOf="@+id/btnFive"
+        app:layout_constraintTop_toTopOf="@+id/btnFive" />
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/btnSix"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="43dp"
+        android:background="@drawable/ic_white_ellipse"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnFive"
+        app:layout_constraintTop_toBottomOf="@+id/btnThree" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/_6"
+        android:textSize="32sp"
+        app:layout_constraintBottom_toBottomOf="@+id/btnSix"
+        app:layout_constraintEnd_toEndOf="@+id/btnSix"
+        app:layout_constraintStart_toStartOf="@+id/btnSix"
+        app:layout_constraintTop_toTopOf="@+id/btnSix" />
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/btnSeven"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/ic_white_ellipse"
+        app:layout_constraintStart_toStartOf="@+id/btnFour"
+        app:layout_constraintTop_toBottomOf="@+id/btnFour" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/_7"
+        android:textSize="32sp"
+        app:layout_constraintBottom_toBottomOf="@+id/btnSeven"
+        app:layout_constraintEnd_toEndOf="@+id/btnSeven"
+        app:layout_constraintStart_toStartOf="@+id/btnSeven"
+        app:layout_constraintTop_toTopOf="@+id/btnSeven" />
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/btnEight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/ic_white_ellipse"
+        app:layout_constraintStart_toEndOf="@+id/btnSeven"
+        app:layout_constraintTop_toBottomOf="@+id/btnFive" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/_8"
+        android:textSize="32sp"
+        app:layout_constraintBottom_toBottomOf="@+id/btnEight"
+        app:layout_constraintEnd_toEndOf="@+id/btnEight"
+        app:layout_constraintStart_toStartOf="@+id/btnEight"
+        app:layout_constraintTop_toTopOf="@+id/btnEight" />
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/btnNine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="43dp"
+        android:background="@drawable/ic_white_ellipse"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnEight"
+        app:layout_constraintTop_toBottomOf="@+id/btnSix" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/appCompatTextView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/_9"
+        android:textSize="32sp"
+        app:layout_constraintBottom_toBottomOf="@+id/btnNine"
+        app:layout_constraintEnd_toEndOf="@+id/btnNine"
+        app:layout_constraintStart_toStartOf="@+id/btnNine"
+        app:layout_constraintTop_toTopOf="@+id/btnNine" />
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/btnTouchId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/ic_white_ellipse"
+        android:src="@drawable/ic_touch_id"
+        app:layout_constraintStart_toStartOf="@+id/btnSeven"
+        app:layout_constraintTop_toBottomOf="@+id/btnSeven" />
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/btnZero"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/ic_white_ellipse"
+        app:layout_constraintStart_toEndOf="@+id/btnTouchId"
+        app:layout_constraintTop_toBottomOf="@+id/btnEight" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/_0"
+        android:textSize="32sp"
+        app:layout_constraintBottom_toBottomOf="@+id/btnZero"
+        app:layout_constraintEnd_toEndOf="@+id/btnZero"
+        app:layout_constraintStart_toStartOf="@+id/btnZero"
+        app:layout_constraintTop_toTopOf="@+id/btnZero" />
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/btnDelete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="43dp"
+        android:background="@drawable/ic_white_ellipse"
+        android:src="@drawable/ic_delete"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnZero"
+        app:layout_constraintTop_toBottomOf="@+id/btnNine" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="110dp"
+        android:text="@string/forgot_password"
+        android:textColor="@color/grey"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnZero" />
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
