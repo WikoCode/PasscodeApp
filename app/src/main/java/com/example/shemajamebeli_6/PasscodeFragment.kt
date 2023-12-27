@@ -1,12 +1,12 @@
 package com.example.shemajamebeli_6
 
 import android.widget.Toast
+import androidx.fragment.app.viewModels
 import com.example.shemajamebeli_6.databinding.FragmentPasscodeBinding
 
 class PasscodeFragment : BaseFragment<FragmentPasscodeBinding>(FragmentPasscodeBinding::inflate) {
 
-    private val correctPasscode = "0934"
-    private var enteredPasscode = ""
+    private val viewModel: PasscodeViewModel by viewModels()
 
     override fun setupUI() {
         resetCircles()
@@ -36,21 +36,18 @@ class PasscodeFragment : BaseFragment<FragmentPasscodeBinding>(FragmentPasscodeB
     }
 
     private fun handleButtonClick(number: String) {
-        if (enteredPasscode.length < 4) {
-            enteredPasscode += number
-            updateCircles()
-        }
-        if (enteredPasscode.length == 4) {
+        viewModel.addDigit(number)
+        updateCircles()
+        if (viewModel.enteredPasscode.length == 4) {
             checkPasscode()
         }
     }
 
     private fun handleDeleteClick() {
-        if (enteredPasscode.isNotEmpty()) {
-            enteredPasscode = enteredPasscode.dropLast(1)
-            updateCircles()
-        }
+        viewModel.removeLastDigit()
+        updateCircles()
     }
+
 
 
     private fun updateCircles() {
@@ -62,7 +59,7 @@ class PasscodeFragment : BaseFragment<FragmentPasscodeBinding>(FragmentPasscodeB
         )
         circles.forEachIndexed { index, imageView ->
             imageView.setImageResource(
-                if (index < enteredPasscode.length) R.drawable.ic_green_ellipse
+                if (index < viewModel.enteredPasscode.length) R.drawable.ic_green_ellipse
                 else R.drawable.ic_transparent_ellipse
             )
         }
@@ -70,18 +67,18 @@ class PasscodeFragment : BaseFragment<FragmentPasscodeBinding>(FragmentPasscodeB
 
 
     private fun resetCircles() {
-        enteredPasscode = ""
         updateCircles()
     }
 
     private fun checkPasscode() {
-        if (enteredPasscode == correctPasscode) {
+        if (viewModel.isPasscodeCorrect()) {
             Toast.makeText(requireContext(), "Success!", Toast.LENGTH_SHORT).show()
-            resetCircles()
         } else {
             Toast.makeText(requireContext(), "Incorrect Password", Toast.LENGTH_SHORT).show()
-            resetCircles()
         }
+        viewModel.resetPasscode()
+        resetCircles()
     }
+
 
 }
